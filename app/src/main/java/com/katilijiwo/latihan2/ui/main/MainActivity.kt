@@ -2,7 +2,9 @@ package com.katilijiwo.latihan2.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
@@ -88,7 +90,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
 
         categoriesAdapter = CategoriesAdapter()
         binding.rvCategories.adapter = categoriesAdapter
-        binding.rvCategories.layoutManager = LinearLayoutManager(this)
-
+        binding.rvCategories.layoutManager = GridLayoutManager(this, 2, GridLayoutManager.HORIZONTAL, false)
+        binding.rvCategories.layoutDirection = View.LAYOUT_DIRECTION_LTR
     }
 }
