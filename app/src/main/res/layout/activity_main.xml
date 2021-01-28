@@ -25,6 +25,12 @@
             app:pageColor="#999999"
             app:snap="false" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_categories"
+            tools:listitem="@layout/list_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 
 
