@@ -5,14 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.AsyncListDiffer
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.PagerAdapter
-import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
 import com.katilijiwo.latihan2.R
-import com.katilijiwo.latihan2.data.remote.json.Banner
+import com.katilijiwo.latihan2.data.remote.json.banner.Banner
 import com.katilijiwo.latihan2.databinding.ListBannerBinding
 import javax.inject.Inject
 

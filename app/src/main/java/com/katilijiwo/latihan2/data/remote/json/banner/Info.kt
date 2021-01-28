@@ -1,4 +1,4 @@
-package com.katilijiwo.latihan2.data.remote.json
+package com.katilijiwo.latihan2.data.remote.json.banner
 
 
 import com.google.gson.annotations.SerializedName

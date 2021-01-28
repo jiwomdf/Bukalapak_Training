@@ -2,6 +2,7 @@ package com.katilijiwo.latihan2.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.katilijiwo.latihan2.R
@@ -24,6 +25,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel.fetchFlashBanners()
+        viewModel.fetchCategories()
         setupRecyclerView()
     }
 
@@ -36,6 +38,23 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
                     if(event.data != null){
                         bannerAdapter.setListBanner(event.data)
                         bannerAdapter.notifyDataSetChanged()
+                    }
+                    showLoading(false)
+                }
+                is BaseViewModel.Event.Error -> {
+                    showLoading(false)
+                }
+                is BaseViewModel.Event.Loading -> {
+                    showLoading(true)
+                }
+            }
+        })
+
+        viewModel.categories.observe(this, { event ->
+            when(event){
+                is BaseViewModel.Event.Success -> {
+                    if(event.data != null){
+                        val test= ""
                     }
                     showLoading(false)
                 }
